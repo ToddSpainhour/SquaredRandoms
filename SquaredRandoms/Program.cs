@@ -7,7 +7,13 @@ namespace SquaredRandoms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Squared Randoms! (\b)");
+
+
+
+            Console.WriteLine("Squared Randoms!");
+
+
+
 
             var randomNumber = new Random();
 
@@ -19,12 +25,20 @@ namespace SquaredRandoms
 
 
 
+            Console.WriteLine("Let start by generating 20 random numbers under 50.");
+            Console.ReadKey();
+
+
+
+
+
             for (int i = 0; i < 21; i++)
             {
                 var randonNumberUnder50 = randomNumber.Next(51);
                 listOfRandomNumbersBelowFifty.Add(randonNumberUnder50);
-
             }
+
+
 
 
 
@@ -34,6 +48,16 @@ namespace SquaredRandoms
                 Console.WriteLine(number);
             }
 
+            Console.ReadKey();
+
+
+
+
+
+            Console.WriteLine("Now we need to square those numbers.");
+            Console.ReadKey();
+
+
 
 
 
@@ -42,17 +66,32 @@ namespace SquaredRandoms
             {
                 //  number squaredand push to new list
                 int squaredNumber = number * number;
+                Console.WriteLine($"The squared number is: {squaredNumber}");
                 listOfSquaredNumbers.Add(squaredNumber);
             }
+
+            Console.ReadKey();
+
+
+
+
+
+            Console.WriteLine("Odds be gone!");
+            Console.ReadKey();
+
+
 
 
 
             foreach (var number in listOfSquaredNumbers)
             {
-                Console.WriteLine($"Your squared number is {number}");
+                if (number % 2 == 0)
+                {
+                    Console.WriteLine($"This should be an even number: {number}");
+                }
             }
 
-
+            Console.ReadKey();
 
 
         }
